@@ -1,0 +1,9 @@
+{
+  "name": "blue-screen",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static BSOD-style page for Vercel",
+  "scripts": {
+    "build": "node -e \"console.log('Static site: no compile step.'); process.exit(0);\""
+  }
+}

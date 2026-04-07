@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A harmless full-screen blue screen page" />
+  <title>:( Your PC ran into a problem</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      background: #0078d7;
+      color: #fff;
+      font-family: "Segoe UI", SegoeUI, system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .bsod {
+      min-height: 100%;
+      padding: clamp(2rem, 6vw, 4rem) clamp(1.5rem, 5vw, 3rem);
+      max-width: 52rem;
+    }
+    .face {
+      font-size: clamp(4rem, 12vw, 7rem);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+      user-select: none;
+    }
+    h1 {
+      font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+      font-weight: 400;
+      margin-bottom: 2rem;
+      line-height: 1.35;
+    }
+    .details {
+      font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+      line-height: 1.65;
+      opacity: 0.95;
+    }
+    .details p { margin-bottom: 1rem; }
+    .code {
+      font-family: ui-monospace, "Cascadia Code", "Consolas", monospace;
+      font-size: 0.9em;
+      margin-top: 0.35rem;
+    }
+    .progress {
+      margin-top: 2.5rem;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .spinner {
+      width: 1.25rem;
+      height: 1.25rem;
+      border: 2px solid rgba(255,255,255,0.35);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .spinner { animation: none; border-color: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <main class="bsod" role="status" aria-live="polite">
+    <div class="face" aria-hidden="true">:(</div>
+    <h1>Your PC ran into a problem and needs to restart. We&rsquo;re just collecting some error info, and then we&rsquo;ll restart for you.</h1>
+    <div class="details">
+      <p><strong>0% complete</strong></p>
+      <p>For more information about this issue and possible fixes, visit <span class="code">https://www.windows.com/stopcode</span></p>
+      <p>If you call a support person, give them this info:<br /><span class="code">Stop code: CURSOR_DEPLOYMENT_TOO_AWESOME</span></p>
+    </div>
+    <div class="progress">
+      <span class="spinner" aria-hidden="true"></span>
+      <span>This is a static page — your device is fine.</span>
+    </div>
+  </main>
+</body>
+</html>
