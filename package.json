@@ -3,7 +3,10 @@
   "private": true,
   "version": "1.0.0",
   "description": "Static BSOD-style page for Vercel",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
-    "build": "node -e \"console.log('Static site: no compile step.'); process.exit(0);\""
+    "build": "node -e \"console.log('Static site: deploy root as-is.'); process.exit(0);\""
   }
 }
